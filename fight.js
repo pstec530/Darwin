@@ -114,7 +114,7 @@ function chooseAttack() {
             return darwin.health;
         } else if (player.strength > 40) {
             alert("That's a decent dive! Darwin suffers 20 damage!");
-            darwin.health -= -20;
+            darwin.health -= 20;
             return darwin.health;
         } else {
             alert("That's not a great dive, but Darwin still suffers 10 damage!");
@@ -162,26 +162,22 @@ function chooseAttack() {
         alert("You're drinking a health potion...");
         if (pLuck < 10) {
             alert("Oh no! You were poisoned by the potion, you lost some health");
-            player.health -= 10;
+            player.health -= 25;
         } else {
             alert("You were given the benefits of the potion, extra health!");
-            player.health += 10;
+            player.health += 25;
         }
 
     } else if (pChoice.toLowerCase() === "s") {
         alert("You're drinking a strength potion...");
         if (pLuck < 10) {
             alert("Oh no! You were poisoned by the potion, you lost some strength");
-            player.strength -= 25;
+            player.strength -= 20;
         } else {
             alert("You were given the benefits of the potion, extra strength!");
-            player.strength += 25;
+            player.strength += 20;
         }
 
-    } else if (pChoice.toLowerCase() === "rape") {
-        alert("Great idea, you deal 1000 damage because of your awesomeness");
-        darwin.health -= 1000;
-        
     } else {
         alert("You did nothing... waste of an attack...");
     }
